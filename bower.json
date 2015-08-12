@@ -1,0 +1,25 @@
+{
+  "name": "angular-pager",
+  "main": "angular-pager.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/damonf/angular-pager",
+  "authors": [
+    "Damon Friendship"
+  ],
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.3",
+    "angular-mocks": "~1.4.3",
+    "jquery": "~2.1.4"
+  }
+}

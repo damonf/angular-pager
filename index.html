@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pager</title>
+
+  <link href="style.css" rel="stylesheet"/>
+
+ </head>
+
+ <body ng-app="pagerExample">
+
+  <div ng-controller="ExampleController">
+    <angular-pager num-pages="pages.totalPages"
+           on-change-page="pages.changePageHandler(newPage)"
+           reset="pages.reset"></angular-pager>
+    <button ng-click="pages.reset = 1">reset</button>
+  </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="angular-pager.js"></script>
+  <script>
+    angular.module('pagerExample', ['angular.pager'])
+      .controller('ExampleController', ['$scope', function($scope) {
+         $scope.pages = { totalPages: 20, reset: -1 };
+         $scope.pages.changePageHandler = function (page) {
+           console.log(page);
+         };
+       }]);
+  </script>
+</body>
+
+</html>
